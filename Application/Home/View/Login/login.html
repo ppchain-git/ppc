@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" style="font-size: 50px;">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>PPC 链民链</title>
+<link rel="stylesheet" href="/Public/Home/css/login.css">
+<link rel="stylesheet" href="/Public/Home/css/normalize.css">
+
+<script type="text/javascript" src="/Public/Home/js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="/Public/Home/layer/layer.js"></script>
+<script type="text/javascript" src="/Public/Home/js/index.js"></script>
+
+<body class="bgf5">
+<div class="login-container">
+	<div class="formbox" style="position: fixed;left: 0;top: 0;right: 0;bottom: 0;margin: auto;height: 408px;">
+		<form name="formlogin" id="loginForm" class="formlogin" method="post" action="{:U('Login/checkLogin')}">
+			<div class="logo">
+				<img src="/Public/Home/images/logo.png">
+			</div>
+			<div class="input_box" style="margin-top: .4rem;">
+				<span><img src="/Public/Home/images/user.png" alt=""></span>
+				<input type="text" name="account" class="username" placeholder="手机/UID" autocomplete="off"/>
+			</div>
+			<div class="input_box" style="margin-top: .4rem;">
+				<span><img src="/Public/Home/images/password.png" alt=""></span>
+				<input type="password" name="password" class="password" placeholder="登录密码" oncontextmenu="return false" onpaste="return false" />
+			</div>
+			<div class="input_box" style="margin-top: .4rem;position: relative;">
+				<span><img src="/Public/Home/images/password.png" alt=""></span>
+				<input type="text" name="verify" placeholder="验证码" />
+				<img id="code" onclick="change_code()" style="position: absolute;right: 0;top: 0;width: 80px;height: 40px;border-radius: 5px;" src="{:U('login/verify')}" alt="">
+			</div>
+			<div  class="inde-btn">
+				<button id="submit" type="button" style="margin: .5rem 0;" onclick="login()">登录</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+</body>
+</html>

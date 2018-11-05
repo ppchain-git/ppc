@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>转账记录</title>
+<link rel="stylesheet" href="/Public/Home/css/style.css">
+<link rel="stylesheet" href="/Public/Home/css/digital.css">
+<script type="text/javascript" src="/Public/Home/js/jquery-1.9.1.min.js" ></script>
+
+<body class="bg96">
+<div class="header">
+	<div class="header_l">
+		<a href="{:U('Index/index')}"><img src="/Public/Home/images/jiant.png" alt=""></a>
+	</div>
+	<div class="header_c"><h2>记录</h2></div>
+	<div class="header_r"></div>
+</div>
+
+<div class="undone_order">
+	<div class="undone_order_titel clear_wl">
+		<a href="{:U('Index/trans',array('type'=>1))}" <eq name='type' value='1'> class="undone_OT_l fl noe" <else /> class="undone_OT_l fl" </eq> >
+		转出
+		</a>
+		<a href="{:U('Index/trans')}" <eq name='type' value='1'> class="undone_OT_r fr" <else /> class="undone_OT_r fr noe" </eq>>
+		转入
+		</a>
+	</div>
+</div>
+
+<div id="wrapper" style="top: 95px;">
+	<div class="scrollera">
+		<ul>
+		<?php if($Chan_info):?>
+			<foreach name="Chan_info" item="v">
+				<li>
+					<p class="dig_re_p" style="font-size: 14px;color: #000;margin-bottom: 5px;"><eq name='type' value='1'>转出<else />转入({$v['pay_id']})</eq><eq name='type' value='1'>({$v['uid']})</eq>&nbsp; <span>{$v['get_nums']} <if condition="cookie('think_language') eq 'en-us'">{$v['en_coin_name']}<else />{$v['coin_name']}</if></span> </p>
+					<!-- <p><eq name='type' value='1'>昵称：{$v['outinfo']}</eq>&nbsp;<span <if condition="$type eq 0">style="float:left" </if>>{$v['get_timeymd']} {$v['get_timedate']}</span></p> -->
+					<p>昵称：<eq name='type' value='1'>{$v['outinfo']} <else />{$v['ininfo']}</eq>&nbsp;<span>{$v['get_timeymd']} {$v['get_timedate']}</span></p>
+				</li>
+			</foreach>
+		<?php else:?>
+		<span style="width: 100%;padding: 20px 0;text-align: center;text-align: center;display: block;font-size: 14px;">亲，找不到相关记录哦~</span>
+		<?php endif;?>
+		</ul>
+	</div>
+</body>
+
+</html>

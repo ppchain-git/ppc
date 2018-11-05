@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>PPC 链民链</title>
+<link rel="stylesheet" href="/Public/Home/css/style.css">
+
+<script type="text/javascript" src="/Public/Home/js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="/Public/Home/layer/layer.js"></script>
+<script type="text/javascript" src="/Public/Home/js/index.js"></script>
+<script type="text/javascript" src="/Public/Home/js/rem.js" ></script>
+
+<style>
+.w-bj{background:url(/Public/Home/images/index-header.png) no-repeat;background-size:100% 100%;}
+.shaomZ{width:100%;padding:15px 0;}
+.shaomZ .shaom{position:relative;width:1.8rem;height:1.8rem;margin:0 auto;display:block;}
+.shaomZ .shaom img{display:block;}
+.shaomZ .icon{position:absolute;top:.16rem;left:.16rem;display:inline-block;width:1.48rem;height:1.48rem;border-radius:50%;display:block;}
+
+.big_width100{background: #fff;}
+.w-bj p{margin: 0;}
+.centBalance .dLine{top: 0.3rem;}
+.header {height: 48px;}
+.header_back {width: 48px;height: 48px;background: url('/Public/home/wap/images/jiant.png') center center no-repeat;background-size: 38%;position: absolute;left: 0;top: 0;}
+.header_h2 {width: 100%;height: 48px;line-height: 48px;text-align: center;font-size: 18px;color: #FFF;}
+.heck_jlu{color: #fff;text-align: center;line-height: 48px;font-size: 14px;font-weight: 400;position: absolute;right: 15px;top: 0;}
+.wpaeyzic {width: 90%;padding: 10px 5%;background-color: #FFF;border-top: .2rem solid #F9F9F9;}
+.wpaeyzic_title {width: 100%;line-height: 26px;height: 26px;}
+.wpaeyzic_title p {width: 100%;color: #999;font-size: 14px;text-align: left;height: 26px;position: relative;padding-left: 15px;}
+.wpae_sta {background-color: #f3a600;}
+.wpaeyzic_title p span {color: #000;margin-left: 10px;}
+.wpaeyzic_title p b {width: 8px;height: 8px;margin-right: 10px;position: absolute;left: 0;top: 10px;}
+.wpae_stb {background-color: #BF3936;}
+.wpaeyzic_fz {width: 100%;line-height: 26px;height: 26px;position: relative;padding-bottom: 4px;}
+.wpaeyzic_fz p {font-size: 12px;color: #333;width: 100%;overflow: hidden;white-space: nowrap;text-align: left;line-height: 35px;}
+#copyBT {background-color: #FFF;border-radius: 5px;border: 1px solid #fdcb2c;height: 30px;width:auto;padding:0px 8px;max-width:150px;line-height: 28px;text-align: center;position: absolute;top: -32px;right: 0;margin: 0;font-size: 14px;color: #fdcb2c;outline:none;}
+.qindHB_bg{top:0;left:0;background:rgba(0,0,0,.6);z-index:100;position:fixed;height:100%;width:100%;}
+.qindHB{position:absolute;z-index:101;padding:0;left:0;top:0;width:100%;opacity:1;}
+.qindHB_nb{z-index:102;width:100%;position:relative;}
+.qindHB_nb a{width:100%;display:block;margin-top:20px;}
+.qindHB_nb a img{z-index:104;width:100%;}
+.qinb_imga{height:22rem;margin:0 auto;display:block;margin-top:2rem;}
+.qiandHB_wz{position:absolute;top:7rem;width:50%;left:25%;text-align:center;}
+.qiandHB_wz h3{font-size:1.8rem;padding-bottom:1rem;border-bottom:1px dotted rgba(217,45,45,0.4);color:#d92d2d;line-height:1.8rem;font-weight:900;}
+.qiandHB_wz p{font-size:1rem;color:#d92d2d;line-height:2.4rem;font-weight:900;}
+.wpzicicon {padding-bottom: 10px;padding-top: 0px;}
+
+.wpzicicon{width:100%;padding-top:5px;background-color:#fff;padding-bottom:10px;overflow:hidden;border-top:.2rem solid #F9F9F9;}
+.wpzicicon ul{width:100%;}
+.wpzicicon li{width:38%;float:left;margin:0px 6%;}
+.wpzicicon li a{display:block;}
+.wpzicicon li img{width:25%;display:block;margin:0 auto;}
+.wpzicicon li p{text-align:center;font-size:14px;margin-top:5px;color:#999;font-size:13px;}
+
+</style>
+<body>
+<div class="w-bj">
+	<div class="shaomZ">
+		<a class="shaom">
+			<img src="/Public/Home/images/logo.png" class="icon">
+		</a>
+		<p style="font-size: 14px;color: #FFF;margin-top: 10px;line-height: 2;width: 100%;text-align: center;">当前价格：{$coin['coin_price']|default="0.0000"}</p>
+	</div>
+</div>
+<div class="wpaeyzic">
+	<div class="wpaeyzic_title">
+		<p class="clear_wl"><b class="wpae_sta"></b>PPChain 资产<span>{$coin['ucoins']|default="0.0000"}</span></p>
+	</div>
+	<div class="wpaeyzic_title">
+		<p class="clear_wl"><b class="wpae_stb"></b>钱包地址</p>
+	</div>
+	<div class="wpaeyzic_fz">
+		<p>{$waadd}</p>
+		<p id="content" style="opacity:0">{$waadd}</p>
+		<button id="copyBT">复制地址</button>
+	</div>
+</div>
+<div class="wpzicicon">
+	<ul class="clear_wl">
+		<li>
+			<a href="{:U('Index/turnout')}">
+				<img src="/Public/Home/images/zczc.png" />
+				<p>转账</p>
+			</a>
+		</li>
+		<li>
+			<a href="{:U('Index/trans',array('type'=>1))}">
+				<img src="/Public/Home/images/zcjy.png" />
+				<p>记录</p>
+			</a>
+		</li>
+	</ul>
+</div>
+<script>
+function copyArticle(event) {
+	const range = document.createRange();
+	range.selectNode(document.getElementById('content'));
+	const selection = window.getSelection();
+	if (selection.rangeCount > 0) selection.removeAllRanges();
+	selection.addRange(range);
+	document.execCommand('copy');
+	msg_alert("钱包地址复制成功！");
+}
+document.getElementById('copyBT').addEventListener('click', copyArticle, false);
+</script>
+</body>
+</html>
