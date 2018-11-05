@@ -1,0 +1,165 @@
+a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+a{text-decoration: none;color:#000;-webkit-tap-highlight-color: rgba(255, 255, 255, 0);-webkit-user-select: none;-moz-user-focus: none;-moz-user-select: none;}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+body{background:#f8f8f8;text-align:center;color:#fff; width: 100%;skin: 'layui-layer-setmybg'}
+body .layui-layer .layui-layer-content{ color:#666666 !important; border: none !important;text-align:center;padding-top:9px;padding-bottom:6px;}
+body .layui-layer { border: none !important;background-color:#ffec3d !important ;border-radius:15px;text-align:center;}
+
+
+@media (min-width:670px){
+    /* body{ width: 640px !important; margin: 0 auto; } */
+    .login-container {margin: 8% auto 0 auto;}
+    .logo{ width: 100%;}
+    .logo img{ width: 150px !important; display: block; margin: 0 auto;}
+    .big_width{ width: 640px !important; margin: 0 auto; }
+    .big_width100{ width: 640px !important; margin: 0 auto; }
+    .big_width80{ width: 640px !important; margin: 0 auto; }
+}
+
+/*通用*/
+.big_width{ width: 90%; margin: 0 auto; margin-top: 46px;}
+.big_width80{ width: 80%; margin: 0 auto; margin-top: 46px;}
+.big_width100{ width: 100%; margin: 46px auto;margin-bottom:0px;}
+.mgt46{
+    margin-top: 46px;
+}
+.bg96{ background: #fff;margin-top: 52px;}
+input[type="button"], input[type="submit"], input[type="reset"] { -webkit-appearance: none; } 
+textarea { -webkit-appearance: none; outline:none;}
+input{outline:none; -webkit-appearance: none;}
+.por{position: relative;}
+
+.fan-header{
+    text-align: center;
+    color:#fff;
+    height: 120px;
+    width: 100%;
+    background: url(../images/index/index-header.png) 0 0 no-repeat /100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 5px #c5c5c5;
+}
+.fan-header .icon{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.footer-fan{
+    position: fixed;
+    height: 52px;
+    /*background: linear-gradient(to bottom ,#021e56 30%,#290143 100%);*/
+    /*font-size:#fff;*/
+    background:#1da762;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+.footer-fan a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color:#fff;
+    /*border-right:1px solid #999;*/
+    flex:1;
+}
+.footer-fan a:last-child{
+    border-right: none;
+}
+.footer-fan a img{
+    width: 26px;
+    height: 26px;
+}
+/*导航标题*/
+.header{
+    width:100%;
+    height:52px;
+    background: #1da762;
+   color: #C2E7FF;
+   position: fixed;
+   top: 0;
+   left: 0;
+    z-index: 1;
+}
+.header h2{
+    color:#fff;
+    text-align: center;
+    line-height: 52px;
+    font-size:16px;
+    font-weight: 400;
+}
+
+.header_l{
+    width: 20%;
+    height:1rem;
+    float: left;
+    position: relative;
+  
+}
+
+.header_l a{
+    display: block;
+    float: left;
+    height: 52px;
+
+}
+.header_l a img {
+    position: absolute;
+    width: 20px;
+    top: 14px;
+    left:10px;
+}
+
+.header_c{
+    width: 60%;
+    height: 52px;
+    float: left;
+    position: relative;
+	/*overflow:hidden;数字资产选择币种时*/
+}
+
+.header_r{
+    width: 19%;
+    height: 52px;
+    float: right;
+    position: relative;
+}
+
+.header_r a{
+    line-height: 52px;
+    color:#fff;
+    font-size:14px;
+    float: right;
+    margin-right:10px;
+	text-align:right;
+	
+}
+.en_header_r a{
+	line-height: 18px;
+	margin-top: 7px;
+	width:120%;
+}
+.header_r a img {
+    position: absolute;
+    width: 22px;
+    top: 12px;
+    right:10px;
+}
+
+.yue{display: inline-block;/*padding-left: 5px;*/}
+.jifen{display: inline-block;/*padding-left: 5px;*/}
+
